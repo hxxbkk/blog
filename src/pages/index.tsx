@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import GlobalStyle from 'components/Common/Globalstyle'
-//import Footer from 'components/Common/Footer'
+import Footer from 'components/Common/Footer'
 import CategoryList from 'components/Main/CategoryList'
 import Introduction from 'components/Main/Introduction'
 import PostList from 'components/Main/PostList'
@@ -25,7 +25,7 @@ const IndexPage: FunctionComponent = function () {
       <Introduction />
       <CategoryList selectedCategory="Web" categoryList={CATEGORY_LIST} />
       <PostList />
-      {/* <Footer /> */}
+      <Footer />
     </Container>
   )
 }
