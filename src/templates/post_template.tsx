@@ -4,6 +4,7 @@ import { PostPageItemType } from 'types/PostItem.types'
 import Template from 'components/Common/Template'
 import PostHead from 'components/Post/PostHead'
 import { Stringifiable } from 'query-string'
+import PostContent from 'components/Post/PostContent'
 
 type PostTemplateProps = {
   data: {
@@ -32,6 +33,7 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
       },
     },
   } = edges[0]
+
   return (
     <Template>
       <PostHead
@@ -40,6 +42,7 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
         categories={categories}
         thumbnail={gatsbyImageData}
       />
+      <PostContent html={html} />
     </Template>
   )
 }
