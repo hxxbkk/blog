@@ -5,6 +5,7 @@ import Template from 'components/Common/Template'
 import PostHead from 'components/Post/PostHead'
 import { Stringifiable } from 'query-string'
 import PostContent from 'components/Post/PostContent'
+import CommentWidget from 'components/Post/CommentWidget'
 
 type PostTemplateProps = {
   data: {
@@ -20,29 +21,20 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
   },
 }) {
   const {
-    node: {
-      html,
-      frontmatter: {
-        title,
-        summary,
-        date,
-        categories,
-        thumbnail: {
-          childImageSharp: { gatsbyImageData },
-        },
-      },
-    },
+    node: { html, frontmatter },
   } = edges[0]
 
   return (
     <Template>
+      {/* <PostHead {...frontmatter} /> */}
       <PostHead
-        title={title}
-        date={date}
-        categories={categories}
-        thumbnail={gatsbyImageData}
+        title={frontmatter.title}
+        date={frontmatter.date}
+        categories={frontmatter.categories}
+        thumbnail={frontmatter.thumbnail.childImageSharp.gatsbyImageData}
       />
       <PostContent html={html} />
+      <CommentWidget />
     </Template>
   )
 }
