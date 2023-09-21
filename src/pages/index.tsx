@@ -32,7 +32,7 @@ type IndexPageProps = {
       siteMetadata: {
         title: string
         description: string
-        siteurl: string
+        siteUrl: string
       }
     }
     allMarkdownRemark: {
@@ -123,6 +123,7 @@ export const getPostList = graphql`
     ) {
       edges {
         node {
+          id
           fields {
             slug
           }
