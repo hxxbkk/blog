@@ -141,7 +141,7 @@ export const getPostList = graphql`
         }
       }
     }
-    file(relativePath: { eq: "profile-image.png" }) {
+    file(relativePath: { eq: "profile-image.png" }) { //기존에 name이었던 것을 relativePath 이렇게 바꿔서 확장자까지 써줌
       childImageSharp {
         gatsbyImageData(width: 120, height: 120)
       }
