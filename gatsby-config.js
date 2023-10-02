@@ -8,11 +8,13 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  pathPrefix: '/blog',
   siteMetadata: {
-    title: `주니어 개발자의 개발 블로그`,
-    description: `주니어 개발자로서의 저를 표현한 블로그입니다.`,
+    title: `개발 블로그`,
+    description: `개발자로서의 저를 표현한 블로그입니다.`,
     author: `Hyob`,
     siteUrl: `https://hxxbkk.github.io/blog/`,
+    
   },
   plugins: [
     {
@@ -100,8 +102,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        policy: [{ userAgent: '*', allow: '/'}],
-      }
-    }
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
   ],
 }
