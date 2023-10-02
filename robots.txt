@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://hxxbkk.github.io/sitemap-index.xml
+Sitemap: https://hxxbkk.github.io/blog/sitemap-index.xml
 Host: https://hxxbkk.github.io
