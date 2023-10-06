@@ -2,7 +2,7 @@ import React, { FunctionComponent, useMemo } from 'react'
 import styled from '@emotion/styled'
 // import GlobalStyle from 'components/Common/Globalstyle'
 // import Footer from 'components/Common/Footer'
-import CategoryList from 'components/Main/CategoryList'
+import CategoryList, { CategoryListProps } from 'components/Main/CategoryList'
 import Introduction from 'components/Main/Introduction'
 import PostList, { PostType } from 'components/Main/PostList'
 import { graphql } from 'gatsby'
@@ -17,11 +17,11 @@ import Template from 'components/Common/Template'
 //   Mobile: 2,
 // }
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-`
+// const Container = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   height: 100vh;
+// `
 
 type IndexPageProps = {
   location: {
@@ -141,7 +141,7 @@ export const getPostList = graphql`
         }
       }
     }
-    file(relativePath: { eq: "profile-image.png" }) { //기존에 name이었던 것을 relativePath 이렇게 바꿔서 확장자까지 써줌
+    file(relativePath: { eq: "profile-image.png" }) {
       childImageSharp {
         gatsbyImageData(width: 120, height: 120)
       }

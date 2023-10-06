@@ -14,7 +14,6 @@ module.exports = {
     description: `개발자로서의 저를 표현한 블로그입니다.`,
     author: `Hyob`,
     siteUrl: `https://hxxbkk.github.io/blog/`,
-    
   },
   plugins: [
     {
